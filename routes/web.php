@@ -21,3 +21,15 @@ Route::get('/', function () {
 Route::get('/person', function () {
     return view('person');
 });
+
+Route::get('/jogador', function () {
+    return view('jogador');
+});
+
+Route::get('/time', function () {
+    return view('time');
+});
+
+Route::get('/campeonatos', function () {
+    return view('campeonatos');
+});

@@ -23,6 +23,7 @@ class CreatePerson extends Component
 
     public function submit()
     {
+
         $this->validate();
 
         Person::create([
