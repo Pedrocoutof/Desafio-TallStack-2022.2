@@ -15,5 +15,6 @@ class Jogador extends Model
         'nacionalidade',
         'vitorias',
         'derrotas',
+        'time',
     ];
 }

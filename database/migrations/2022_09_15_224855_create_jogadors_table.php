@@ -16,6 +16,7 @@ class CreateJogadorsTable extends Migration
             $table->string('nacionalidade');
             $table->integer('vitorias');
             $table->integer('derrotas');
+            $table->foreignId('times')->constrained();
         });
     }
 

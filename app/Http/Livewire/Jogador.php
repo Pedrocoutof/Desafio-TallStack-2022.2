@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Jogador as JogadorModel;
+use App\Models\Time as TimeModel;
 
 class Jogador extends Component
 {
@@ -27,7 +28,7 @@ class Jogador extends Component
     {
         return view('livewire.jogador', [
             'todosJogadores' => JogadorModel::all(),
-
+            'todosTimes' => TimeModel::all(),
         ]);
     }
 
@@ -39,6 +40,7 @@ class Jogador extends Component
             'nacionalidade' => $this->nacionalidade,
             'vitorias' => $this->vitorias,
             'derrotas' => $this->derrotas,
+            'time' => $this->time,
         ]);
 
         $this->reset();

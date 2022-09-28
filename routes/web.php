@@ -33,3 +33,9 @@ Route::get('/time', function () {
 Route::get('/campeonatos', function () {
     return view('campeonatos');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard-campeonato');
+});
+
+

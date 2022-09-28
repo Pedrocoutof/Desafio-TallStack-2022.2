@@ -40,11 +40,28 @@
                     @error('derrotas') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
 
+
+
+
                     <button type="submit" class="bg-blue-500 py-2 px-3 rounded-md shadow-sm text-sm hover:bg-purple-500 font-medium text-white">
                         Cadastrar Jogador
                     </button>
             </div>
+
+
         </form>
+
+        <div>
+            <div x-data="{ open: false }">
+                <button @click="open = true">Times  ↴</button>
+
+                <ul x-show="open" @click.outside="open = false">
+                    @foreach($todosTimes as $time)
+                        <button wire:model="time">{{$time->nome}}</button>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
 
     </div>
     <div class="w-1/4"></div>
@@ -83,7 +100,7 @@
                         {{$jogador->vitorias}}
                     </td>
                     <td class="py-4 px-6">
-                        {{$jogador->derrotas}}
+                        {{$jogador->time}}
                     </td>
                     <td class="py-4 px-6">
                         <button wire:click="deletaPeloId({{$jogador->id}})">Deletar</button>
